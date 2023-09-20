@@ -1,0 +1,7 @@
+x=float(input("x="))
+y=float(input("y="))
+list=[x+y, x-y, x*y, x/y, x//y]
+max_number=max(list)
+list.remove(max(list))
+max_number=max(list)
+print("второе наибольшее число:", max_number)
