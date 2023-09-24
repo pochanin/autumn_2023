@@ -1,0 +1,10 @@
+answer = count = 0
+salary = 0
+while True:
+    salary = int(input('Введите зарплату: '))
+    if salary == 0:
+        break
+    answer += salary
+    count += 1
+
+print('Средняя зарплата составила: ', answer/(count + 1), 'рублей')
