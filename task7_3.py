@@ -5,7 +5,10 @@ def answer(N):
         for j in i:
             numbers.append(j)
     numbers.sort()
-    return [numbers[-3], numbers[-2], numbers[-1]]
+    if len(numbers)>= 3:
+        return [numbers[-3], numbers[-2], numbers[-1]]
+    else:
+        return numbers[::-1]
 
 n = int(input('Введите n: '))
 m = int(input('Введите m: '))
