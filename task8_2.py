@@ -1,8 +1,14 @@
-import lamda
 
-M = [[1, 5, 3], [2, 44, 1, 4], [3, 3]]
-sorted_M = sorted(M, key=lambda x: len(x))
-for i in sorted_M:
-    i.sort()
-    i.reverse()
-print(sorted_M)
+M = [[1, 555555, 3], [2, 44, 1, 4], [3, 33333333]]
+
+for i in M:
+    s = ''
+    for j in i:
+        s += str(j)
+    i.append(len(s))
+
+M = sorted(M, key=lambda x: x[-1])
+for i in range(len(M)):
+    M[i].pop(-1)
+    M[i] = sorted(M[i], reverse=True)
+print(M)
